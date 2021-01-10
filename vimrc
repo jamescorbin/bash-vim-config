@@ -1,19 +1,41 @@
+let g:polyglot_disabled = ['markdown']
+let g:polyglot_disabled = ['autoindent']
+
 set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'vim-python/python-syntax'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
+Plugin 'junegunn/seoul256.vim'
+
+Plugin 'sheerun/vim-polyglot'
+
+call vundle#end()
+filetype plugin indent on
 
 runtime! debian.vim
-
 
 if has("syntax")
   syntax on
 endif
 
-"if has("autocmd")
-"  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-"endif
-
 if has("autocmd")
   filetype plugin indent on
 endif
+
+":PluginInstall
+":PluginList
+":PluginClean
 
 set number
 set noerrorbells
@@ -50,6 +72,8 @@ endif
 if filereadable(expand("~/.vimrc.plug"))
 	source ~/.vimrc.plug
 endif
+
+set visualbell
 
 set background=dark
 let g:python_highlight_all = 1
