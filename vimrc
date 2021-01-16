@@ -17,6 +17,7 @@ Plugin 'vim-python/python-syntax'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
 Plugin 'junegunn/seoul256.vim'
+Plugin 'chrisbra/csv.vim'
 
 Plugin 'sheerun/vim-polyglot'
 
